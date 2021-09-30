@@ -35,6 +35,10 @@ const StyledPop = styled(Popup)`
   }
 `;
 
+const PopupContentWrapper = styled.div`
+  margin: 0 15px;
+`;
+
 const icon = new Icon({
   iconUrl: "/mapPin.svg",
   iconSize: [23, 32],
@@ -174,21 +178,23 @@ const Map = () => {
         <React.Fragment key={id}>
           <Marker position={location} icon={icon}>
             <StyledPop maxHeight={600}>
-              <h2>{name}</h2>
-              {performances.map(({ id, name, images, description }) => (
-                <React.Fragment key={id}>
-                  <h3>{name}</h3>
-                  <div>
-                    <Image
-                      src={images[0].image}
-                      alt={images[0].altText}
-                      width={1000}
-                      height={915}
-                    />
-                  </div>
-                  <p>{description}</p>
-                </React.Fragment>
-              ))}
+              <PopupContentWrapper>
+                <h2>{name}</h2>
+                {performances.map(({ id, name, images, description }) => (
+                  <React.Fragment key={id}>
+                    <h3>{name}</h3>
+                    <div>
+                      <Image
+                        src={images[0].image}
+                        alt={images[0].altText}
+                        width={1000}
+                        height={915}
+                      />
+                    </div>
+                    <p>{description}</p>
+                  </React.Fragment>
+                ))}
+              </PopupContentWrapper>
             </StyledPop>
           </Marker>
         </React.Fragment>
