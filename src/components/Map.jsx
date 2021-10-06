@@ -55,84 +55,7 @@ const icon = new Icon({
   iconSize: [23, 32],
 });
 
-const venues = [
-  {
-    id: "minster",
-    name: "Minster",
-    location: [52.61148728930682, 1.7273403270395928],
-    performances: [
-      {
-        id: "michael-page",
-        name: "Michael Page",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        soundcloudLink:
-          "https://soundcloud.com/user-146670016/stuart-bowditch-yarcade",
-        image: {
-          url: "https://www.khaosodenglish.com/wp-content/uploads/2016/07/nftu.03.head_.jpg",
-          altText: "an image of michael page",
-        },
-      },
-      {
-        id: "tazelaar-stevenson",
-        name: "Tazelaar Stevenson",
-        description:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        soundcloudLink:
-          "https://soundcloud.com/edperkinsmusic/the-stream-first-rehearsal",
-        image: {
-          url: "https://www.khaosodenglish.com/wp-content/uploads/2016/07/nftu.03.head_.jpg",
-          altText: "an image of michael page",
-        },
-      },
-    ],
-  },
-  {
-    id: "hippodrome",
-    name: "Hippodrome",
-    location: [52.603327314293566, 1.7355301153441194],
-    performances: [
-      {
-        id: "the-seer",
-        name: "The Seer",
-        description:
-          "Auctor augue mauris augue neque gravida in. Quis risus sed vulputate odio ut. Mi quis hendrerit dolor magna eget est lorem. Gravida arcu ac tortor dignissim. Quis eleifend quam adipiscing vitae proin. ",
-        soundcloudLink:
-          "https://soundcloud.com/user-146670016/stuart-bowditch-yarcade",
-        image: {
-          url: "https://www.khaosodenglish.com/wp-content/uploads/2016/07/nftu.03.head_.jpg",
-          altText: "an image of michael page",
-        },
-      },
-      {
-        id: "tazelaar-stevenson",
-        name: "Tazelaar Stevenson",
-        description:
-          "Ut venenatis tellus in metus vulputate eu scelerisque. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Viverra adipiscing at in tellus integer feugiat scelerisque.",
-        soundcloudLink:
-          "https://soundcloud.com/edperkinsmusic/the-stream-first-rehearsal",
-        image: {
-          url: "https://www.khaosodenglish.com/wp-content/uploads/2016/07/nftu.03.head_.jpg",
-          altText: "an image of michael page",
-        },
-      },
-      {
-        id: "tazelaar-stevenson",
-        name: "Tazelaar Stevenson",
-        description:
-          "Risus viverra adipiscing at in tellus. Id leo in vitae turpis massa sed. Vitae congue eu consequat ac. Ultrices sagittis orci a scelerisque purus semper. Vitae semper quis lectus nulla at. Parturient montes nascetur ridiculus mus mauris. Dictum fusce ut placerat orci.",
-        soundcloudLink:
-          "https://soundcloud.com/edperkinsmusic/the-stream-first-rehearsal",
-        image: {
-          url: "https://www.khaosodenglish.com/wp-content/uploads/2016/07/nftu.03.head_.jpg",
-          altText: "an image of michael page",
-        },
-      },
-    ],
-  },
-];
-
-const Map = () => {
+const Map = ({ locations }) => {
   return (
     <MapContainer
       center={[52.60839450365971, 1.7310895754408306]}
@@ -145,20 +68,20 @@ const Map = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {venues.map(({ id, location, name, performances }) => (
+      {locations.map(({ id, title, lat, long, performances }) => (
         <React.Fragment key={id}>
-          <Marker position={location} icon={icon}>
+          <Marker position={[lat, long]} icon={icon}>
             <StyledPop maxHeight={600}>
               <PopupContentWrapper>
-                <h2>{name}</h2>
+                <h2>{title}</h2>
                 {performances.map(
-                  ({ id, name, image, soundcloudLink, description }) => (
+                  ({ id, name, description, image, soundcloudLink }) => (
                     <React.Fragment key={id}>
                       <ArtistTitle>{name}</ArtistTitle>
                       <div>
                         <Image
                           src={image.url}
-                          alt={image.altText}
+                          alt={image.alternativeText}
                           width={1000}
                           height={915}
                         />
@@ -169,7 +92,9 @@ const Map = () => {
                         width="100%"
                         height="100%"
                         config={{
-                          soundcloud: { options: { show_teaser: "false" } },
+                          soundcloud: {
+                            options: { show_teaser: "false" },
+                          },
                         }}
                       />
                     </React.Fragment>

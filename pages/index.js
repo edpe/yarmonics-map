@@ -1,11 +1,14 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-function HomePage() {
+function HomePage({ locations }) {
+  console.log(locations);
   const Map = dynamic(() => import("../src/components/Map"), {
-    loading: () => <p>Loading</p>,
+    loading: () => <p>Loading map</p>,
     ssr: false,
   });
+
   return (
     <div>
       <Head>
@@ -16,9 +19,46 @@ function HomePage() {
           crossOrigin=""
         />
       </Head>
-      <Map />
+      <Map locations={locations} />
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const client = new ApolloClient({
+    uri: "https://yarmonics-map-cms.herokuapp.com/graphql",
+    cache: new InMemoryCache(),
+  });
+
+  const { data, loading, error } = await client.query({
+    query: gql`
+      query getLocations {
+        locations {
+          id
+          title
+          lat
+          long
+          performances {
+            id
+            name
+            description
+            soundcloudLink
+            image {
+              url
+              previewUrl
+              alternativeText
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      locations: data.locations,
+    },
+  };
+};
 
 export default HomePage;
