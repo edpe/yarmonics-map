@@ -1,9 +1,25 @@
 import dynamic from "next/dynamic";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { SpinnerRoundOutlined } from "spinners-react";
+
+import styled from "styled-components";
+
+const CenterInPage = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+`;
 
 function HomePage({ locations }) {
   const Map = dynamic(() => import("../src/components/Map"), {
-    loading: () => <p>Loading map</p>,
+    loading: () => (
+      <CenterInPage>
+        <SpinnerRoundOutlined />
+      </CenterInPage>
+    ),
     ssr: false,
   });
 
