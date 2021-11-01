@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0; 
   }
   
-  leaflet-container {
+  .leaflet-container {
     flex-grow: 1 !important;
   }
   
