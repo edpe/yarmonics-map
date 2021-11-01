@@ -31,7 +31,7 @@ const StyledPop = styled(Popup)`
     margin: 0 !important;
     padding: 0 19px !important;
 
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       max-height: calc(100vh - 125px - 10px);
     }
   }
