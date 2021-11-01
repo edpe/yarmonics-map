@@ -11,29 +11,37 @@ import {
 import { Icon } from "leaflet";
 import ReactPlayer from "react-player/soundcloud";
 import { SpinnerRoundOutlined } from "spinners-react";
+import Link from "next/link";
 
 const StyledPop = styled(Popup)`
   .leaflet-popup-content-wrapper {
     border-radius: 0;
   }
 
+  .leaflet-container
+    .leaflet-touch
+    .leaflet-retina
+    .leaflet-safari
+    .leaflet-fade-anim
+    .leaflet-grab
+    .leaflet-touch-drag
+    .leaflet-touch-zoom {
+    flex-grow: 1 !important;
+    border: 1px solid black;
+  }
+
   .leaflet-popup-tip-container {
     visibility: hidden;
   }
 
-  .leaflet-popup-content.leaflet-popup-scrolled {
-    margin: 0 !important;
-  }
-
   .leaflet-popup-content {
+    overflow-y: auto;
+    width: 100vw !important;
+    max-width: 360px;
+    overflow-x: hidden;
+    max-height: calc(100vh - 75.14px - 10px);
     margin: 0 !important;
     padding: 0 19px !important;
-    width: 96vw !important;
-
-    @media (min-width: 600px) {
-      width: 50vw !important;
-    }
-    overflow-x: hidden;
   }
 
   .leaflet-popup-close-button {
@@ -50,10 +58,6 @@ const StyledPop = styled(Popup)`
     @media (min-width: 600px) {
       right: 15px !important;
     }
-  }
-
-  .leaflet-popup-scrolled {
-    border: none;
   }
 
   .leaflet-popup-content-wrapper {
@@ -98,6 +102,24 @@ const StyledReactPlayer = styled(ReactPlayer)`
   }
 `;
 
+const PopupTitle = styled.h2`
+  margin: 20px;
+  color: #fff;
+  max-width: 75%;
+`;
+
+const StyledList = styled.ul`
+  list-style-type: none;
+  padding: 20px 0 0 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+`;
+
+const Layout = styled.div`
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+`;
+
 const PopupHeader = styled.div`
   background: #2b2d2f;
   height: 80px;
@@ -110,23 +132,9 @@ const PopupHeader = styled.div`
   box-shadow: 0 3px 14px rgb(0 0 0 / 40%);
 `;
 
-const PopupTitle = styled.h2`
-  margin: 20px;
-  color: #fff;
-  max-width: 75%;
-`;
-
-const StyledList = styled.ul`
-  list-style-type: none;
-  padding: 20px 0 0 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-`;
-const Layout = styled.div`
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
-`;
 const MapWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1 1 auto;
 `;
 
@@ -160,7 +168,7 @@ const Map = ({ locations }) => {
             {locations.map(({ id, title, lat, long, performances }) => (
               <li key={id}>
                 <Marker position={[lat, long]} icon={icon}>
-                  <StyledPop maxHeight={600}>
+                  <StyledPop>
                     <PopupHeader>
                       <PopupTitle>{title}</PopupTitle>
                     </PopupHeader>

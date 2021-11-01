@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
     cache: new InMemoryCache(),
   });
 
-  const { data, loading, error } = await client.query({
+  const { data, error } = await client.query({
     query: gql`
       query getLocations {
         locations {
