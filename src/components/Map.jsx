@@ -55,6 +55,7 @@ const StyledPop = styled(Popup)`
     z-index: 20;
     position: sticky;
     top: -15px;
+
     @media (min-width: 600px) {
       right: 15px !important;
     }
@@ -136,12 +137,60 @@ const MapWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+
+  @media (min-width: 600px) {
+    margin: 0 10px 10px 10px;
+  }
+`;
+
+const Back = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px 15px;
+
+  cursor: pointer;
+
+  @media (min-width: 600px) {
+    align-items: center;
+    margin: 15px;
+
+    transition: margin-left 0.2s ease-in-out;
+
+    &: hover {
+      margin-left: 1px;
+    }
+
+    
+`;
+
+const NavText = styled.h3`
+display: none;
+
+&: hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  display: block;
+  margin-left: 10px;
+  color: #413c3e;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 `;
 
 const Map = ({ locations }) => {
   return (
     <Layout>
       <Header>
+        <Link href="https://www.yarmonics.com/" passHref>
+          <Back>
+            <Image src={"/back.svg"} alt="home page" width={24} height={24} />
+            <NavText>back to home</NavText>
+          </Back>
+        </Link>
         <LogoWrapper>
           <Image
             src={"/yarmonicsLogo.jpg"}
