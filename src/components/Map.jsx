@@ -24,7 +24,7 @@ const StyledPop = styled(Popup)`
 
   .leaflet-popup-content {
     overflow-y: auto;
-    width: 87vw !important;
+    width: calc(100vw - 50px) !important;
     max-width: 360px;
     overflow-x: hidden;
     max-height: calc(100vh - 75.14px - 10px);
