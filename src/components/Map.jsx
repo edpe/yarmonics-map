@@ -18,18 +18,6 @@ const StyledPop = styled(Popup)`
     border-radius: 0;
   }
 
-  .leaflet-container
-    .leaflet-touch
-    .leaflet-retina
-    .leaflet-safari
-    .leaflet-fade-anim
-    .leaflet-grab
-    .leaflet-touch-drag
-    .leaflet-touch-zoom {
-    flex-grow: 1 !important;
-    border: 1px solid black;
-  }
-
   .leaflet-popup-tip-container {
     visibility: hidden;
   }
@@ -137,10 +125,6 @@ const MapWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-
-  @media (min-width: 600px) {
-    margin: 0 10px 10px 10px;
-  }
 `;
 
 const Back = styled.div`
@@ -162,8 +146,6 @@ const Back = styled.div`
     &: hover {
       margin-left: 1px;
     }
-
-    
 `;
 
 const NavText = styled.h3`
@@ -204,7 +186,7 @@ const Map = ({ locations }) => {
         <MapContainer
           center={[52.60839450365971, 1.7310895754408306]}
           bounds={([52.61495, 1.697], [52.55872, 1.76277])}
-          zoom={14}
+          zoom={15}
           style={{ height: "100%", width: "100%" }}
           zoomControl={false}
         >
