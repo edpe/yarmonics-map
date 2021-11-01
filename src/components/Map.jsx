@@ -30,6 +30,10 @@ const StyledPop = styled(Popup)`
     max-height: calc(100vh - 75.14px - 10px);
     margin: 0 !important;
     padding: 0 19px !important;
+
+    @media (max-width: 600px) {
+      max-height: calc(100vh - 125px - 10px);
+    }
   }
 
   .leaflet-popup-close-button {
@@ -68,7 +72,7 @@ const Header = styled.div`
   height: 75.14px;
 
   @media (min-width: 600px) {
-    height: 138.47px;
+    height: 125px;
   }
   background: #fff;
   display: flex;
@@ -80,8 +84,9 @@ const LogoWrapper = styled.div`
   height: 43.14px;
   width: 153px;
   @media (min-width: 600px) {
-    width: 257px;
-    height: 72.47px;
+    width: 234px;
+    height: 65.42px;
+    margin-right: 14px;
   }
 `;
 
@@ -178,8 +183,8 @@ const Map = ({ locations }) => {
           <Image
             src={"/yarmonicsLogo.jpg"}
             alt="Yarmonics logo"
-            width={257}
-            height={72.47}
+            width={234}
+            height={65.42}
           />
         </LogoWrapper>
       </Header>
