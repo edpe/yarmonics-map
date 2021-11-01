@@ -146,6 +146,7 @@ const Back = styled.div`
     &: hover {
       margin-left: 1px;
     }
+  }
 `;
 
 const NavText = styled.h3`

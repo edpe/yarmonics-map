@@ -7,12 +7,16 @@ import { createGlobalStyle } from "styled-components";
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
 
+// applies flex-grow to map container to fix safari only bug
 const GlobalStyle = createGlobalStyle`
-  body {
-    .leaflet-container {
-      flex-grow: 1 !important;
-    }
+  body { 
+    margin: 0; 
   }
+  
+  leaflet-container {
+    flex-grow: 1 !important;
+  }
+  
 `;
 
 const MyApp = ({ Component, pageProps }) => {
