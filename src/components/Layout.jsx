@@ -20,6 +20,7 @@ const Header = styled.div`
 const LogoWrapper = styled.div`
   height: 43.14px;
   width: 153px;
+  cursor: pointer;
   @media (min-width: 600px) {
     width: 234px;
     height: 65.42px;
@@ -52,61 +53,20 @@ const Footer = styled.div`
   }
 `;
 
-const Back = styled.div`
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 25px 15px;
-
-  cursor: pointer;
-
-  @media (min-width: 600px) {
-    align-items: center;
-    margin: 15px;
-
-    transition: margin-left 0.2s ease-in-out;
-
-    &: hover {
-      margin-left: 12px;
-    }
-  }
-`;
-
-const NavText = styled.h3`
-display: none;
-
-&: hover {
-  text-decoration: underline;
-}
-
-@media (min-width: 600px) {
-  display: block;
-  margin-left: 10px;
-  color: #413c3e;
-  font-size: 14px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-`;
-
 const Layout = ({ children }) => {
   return (
     <PageWrapper>
       <Header>
         <Link href="https://www.yarmonics.com/" passHref>
-          <Back>
-            <Image src={"/back.svg"} alt="home page" width={24} height={24} />
-            <NavText>back</NavText>
-          </Back>
+          <LogoWrapper>
+            <Image
+              src={"/yarmonicsLogo.jpg"}
+              alt="Yarmonics logo"
+              width={234}
+              height={65.42}
+            />
+          </LogoWrapper>
         </Link>
-        <LogoWrapper>
-          <Image
-            src={"/yarmonicsLogo.jpg"}
-            alt="Yarmonics logo"
-            width={234}
-            height={65.42}
-          />
-        </LogoWrapper>
       </Header>
       <ContentWrapper>{children}</ContentWrapper>
       <Footer />
