@@ -40,14 +40,15 @@ const ContentWrapper = styled.div`
 `;
 
 const Footer = styled.div`
-  width: 100%;
-  height: 50px;
-  background-color: #1b1c1d;
-  position: sticky;
-  box-shadow: 0 3px 14px rgb(0 0 0 / 40%);
+  display: none;
 
   @media (min-width: 600px) {
+    display: block;
     height: 80px;
+    width: 100%;
+    background-color: #1b1c1d;
+    position: sticky;
+    box-shadow: 0 3px 14px rgb(0 0 0 / 40%);
   }
 `;
 
