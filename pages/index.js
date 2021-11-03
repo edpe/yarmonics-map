@@ -5,7 +5,6 @@ import Layout from "../src/components/Layout";
 const CenterInPage = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 20px;
   flex: 1 1 auto;
@@ -30,6 +29,7 @@ const CircleImage = styled.img`
   height: 150px;
   border-radius: 50%;
   margin: 20px;
+  cursor: pointer;
 
   @media (min-width: 600px) {
     width: 250px;
@@ -45,6 +45,7 @@ const Text = styled.p`
 
 const LinkWrapper = styled.div`
   border: 2px solid #413c3e;
+  margin-top: 10px;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
@@ -54,12 +55,18 @@ const LinkWrapper = styled.div`
     text-decoration: none;
     font-family: "Helvetica Neue", Arial, sans-serif;
     color: #413c3e;
+
+    &:hover {
+      color: #000;
+    }
+    transition: color 0.2s;
   }
 
   &:hover {
-    border: 4px solid #413c3e;
-    margin: -2px 0;
+    background-color: #add8e6;
   }
+
+  transition: background-color 0.2s;
 `;
 
 const HomePage = () => {
@@ -67,13 +74,18 @@ const HomePage = () => {
     <Layout>
       <CenterInPage>
         <Title>Map of Festival Performances</Title>
-        <CircleImage src="/map-sea.png" alt="map of yarmouth" />
+
+        <Link href="/map" passHref>
+          <CircleImage src="/map-sea.png" alt="map of yarmouth" />
+        </Link>
+
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </Text>
+
         <LinkWrapper>
           <Link href="/map">View map</Link>
         </LinkWrapper>
