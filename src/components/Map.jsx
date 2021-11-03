@@ -27,7 +27,7 @@ const StyledPop = styled(Popup)`
     max-width: 360px;
     overflow-x: hidden;
     // viewport height - header height - footer height
-    max-height: calc(100vh - 75.14px - 10px - 50px);
+    max-height: calc(100vh - 75.14px - 10px);
     margin: 0 !important;
     padding: 0 19px !important;
 
