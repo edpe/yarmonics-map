@@ -76,7 +76,9 @@ const HomePage = () => {
         <Title>Map of Festival Performances</Title>
 
         <Link href="/map" passHref>
-          <CircleImage src="/map-sea.png" alt="map of yarmouth" />
+          <a>
+            <CircleImage src="/map-sea.png" alt="map of yarmouth" />
+          </a>
         </Link>
 
         <Text>
