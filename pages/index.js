@@ -12,7 +12,7 @@ const CenterInPage = styled.div`
   @media (min-width: 600px) {
     justify-content: space-between;
     height: 60vh;
-    padding: 40px 300px;
+    padding: 20px 300px;
   }
 `;
 
@@ -25,15 +25,15 @@ const Title = styled.h1`
 `;
 
 const CircleImage = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin: 20px;
+  margin: 15px;
   cursor: pointer;
 
   @media (min-width: 600px) {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 `;
 
 const Text = styled.p`
