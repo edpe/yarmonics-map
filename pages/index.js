@@ -12,7 +12,7 @@ const CenterInPage = styled.div`
   @media (min-width: 600px) {
     justify-content: space-between;
     height: 60vh;
-    padding: 60px 300px;
+    padding: 40px 300px;
   }
 `;
 
@@ -41,6 +41,7 @@ const Text = styled.p`
   font-size: 14px;
   text-align: center;
   color: #413c3e;
+  line-height: 1.5;
 `;
 
 const LinkWrapper = styled.div`
@@ -82,10 +83,15 @@ const HomePage = () => {
         </Link>
 
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          This map contains a growing collection of recordings from performances
+          at Yarmonics festivals. Each red marker represents a venue or site,
+          click that marker to show all recordings from that venue or site.
+          Recordings are streamed via the Soundcloud player which can be played
+          within the map.
+        </Text>
+        <Text>
+          The map can be used whilst visiting the sites in situ, or from
+          wherever else you may be.
         </Text>
 
         <LinkWrapper>
