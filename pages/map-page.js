@@ -2,23 +2,15 @@ import dynamic from "next/dynamic";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { SpinnerRoundOutlined } from "spinners-react";
 import Layout from "../src/components/Layout";
-import styled from "styled-components";
 
-const CenterInPage = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-`;
+import styles from "../styles/MapPage.module.css";
 
 const MapPage = ({ locations }) => {
   const Map = dynamic(() => import("../src/components/Map"), {
     loading: () => (
-      <CenterInPage>
+      <div className={styles.centerSpinner}>
         <SpinnerRoundOutlined />
-      </CenterInPage>
+      </div>
     ),
     ssr: false,
   });

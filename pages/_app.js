@@ -2,22 +2,10 @@ import App from "next/app";
 import Head from "next/head";
 import { createContext } from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { createGlobalStyle } from "styled-components";
+import "../styles/globalStyles.css";
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
-
-// applies flex-grow to map container to fix safari only bug
-const GlobalStyle = createGlobalStyle`
-  body { 
-    margin: 0; 
-  }
-  
-  .leaflet-container {
-    flex-grow: 1 !important;
-  }
-  
-`;
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps;
@@ -25,7 +13,6 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <GlobalContext.Provider value={global}>
-        <GlobalStyle />
         <Head>
           {/* <link rel="shortcut icon" href={global.favicon.url} /> */}
           <title>Yarmonics Performance Locations</title>

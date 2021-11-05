@@ -1,103 +1,40 @@
-import styled from "styled-components";
 import Link from "next/link";
 import Layout from "../src/components/Layout";
-
-const CenterInPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  flex: 1 1 auto;
-
-  @media (min-width: 600px) {
-    justify-content: space-between;
-    height: 60vh;
-    padding: 20px 300px;
-  }
-`;
-
-const Title = styled.h1`
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 400;
-  color: #413c3e;
-`;
-
-const CircleImage = styled.img`
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  margin: 15px;
-  cursor: pointer;
-
-  @media (min-width: 600px) {
-    width: 200px;
-    height: 200px;
-`;
-
-const Text = styled.p`
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  color: #413c3e;
-  line-height: 1.5;
-`;
-
-const LinkWrapper = styled.div`
-  border: 2px solid #413c3e;
-  margin-top: 10px;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-
-  a {
-    text-decoration: none;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: #413c3e;
-
-    &:hover {
-      color: #000;
-    }
-    transition: color 0.2s;
-  }
-
-  &:hover {
-    background-color: #add8e6;
-  }
-
-  transition: background-color 0.2s;
-`;
+import styles from "../styles/Home.module.css";
 
 const HomePage = () => {
   return (
     <Layout>
-      <CenterInPage>
-        <Title>Map of Festival Performances</Title>
+      <div className={styles.centerInPage}>
+        <div className={styles.title}>Map of Festival Performances</div>
 
-        <Link href="/map" passHref>
+        <Link href="/map-page" passHref>
           <a>
-            <CircleImage src="/map-sea.png" alt="map of yarmouth" />
+            <img
+              className={styles.circleImage}
+              src="/map-sea.png"
+              alt="Yarmonics performance map"
+            />
           </a>
         </Link>
 
-        <Text>
+        <p className={styles.text}>
           This map contains a growing collection of recordings from performances
           at Yarmonics festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site.
           Recordings are streamed via the Soundcloud player which can be played
           within the map.
-        </Text>
-        <Text>
+        </p>
+
+        <p className={styles.text}>
           The map can be used whilst visiting the sites in situ, or from
           wherever else you may be.
-        </Text>
+        </p>
 
-        <LinkWrapper>
-          <Link href="/map">View map</Link>
-        </LinkWrapper>
-      </CenterInPage>
+        <div className={styles.linkWrapper}>
+          <Link href="/map-page">View map</Link>
+        </div>
+      </div>
     </Layout>
   );
 };
