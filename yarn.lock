@@ -1900,7 +1900,7 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
-isomorphic-unfetch@^3.0.0, isomorphic-unfetch@^3.1.0:
+isomorphic-unfetch@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-3.1.0.tgz#87341d5f4f7b63843d468438128cb087b7c3e98f"
   integrity sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==
@@ -2136,13 +2136,6 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
-
-next-with-apollo@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/next-with-apollo/-/next-with-apollo-5.2.1.tgz#d87f5d16dae9cbe0a2cea650bf77d6ca70d4c54c"
-  integrity sha512-aSTUNxgJFRPrcvEvm9rDSpSKd4FE7egNe0sbrNfjhZI/DsXTvrVC5B+UcnC0m8nLytDqM4ImCp3fjRNzExNgNA==
-  dependencies:
-    isomorphic-unfetch "^3.0.0"
 
 next@12:
   version "12.0.3"

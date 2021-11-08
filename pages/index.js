@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../src/components/Layout";
 import styles from "../styles/Home.module.css";
 
@@ -8,15 +9,12 @@ const HomePage = () => {
       <div className={styles.centerInPage}>
         <div className={styles.title}>Map of Festival Performances</div>
 
-        <Link href="/map-page" passHref>
-          <a>
-            <img
-              className={styles.circleImage}
-              src="/map-sea.png"
-              alt="Yarmonics performance map"
-            />
-          </a>
-        </Link>
+        <Image
+          width={200}
+          height={200}
+          src="/map-sea.png"
+          alt="Yarmonics performance map"
+        />
 
         <p className={styles.text}>
           This map contains a growing collection of recordings from performances
