@@ -8,13 +8,15 @@ const HomePage = () => {
     <Layout>
       <div className={styles.centerInPage}>
         <div className={styles.title}>Map of Festival Performances</div>
-
-        <Image
-          width={200}
-          height={200}
-          src="/map-sea.png"
-          alt="Yarmonics performance map"
-        />
+        <div className={styles.previewImage}>
+          <Image
+            width={200}
+            height={200}
+            layout="responsive"
+            src="/map-yarmouth.png"
+            alt="Yarmonics performance map"
+          />
+        </div>
 
         <p className={styles.text}>
           This map contains a growing collection of recordings from performances

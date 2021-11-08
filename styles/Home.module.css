@@ -27,7 +27,7 @@
   }
 }
 
-.circleImage {
+.previewImage {
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -36,7 +36,7 @@
 }
 
 @media (min-width: 600px) {
-  .circleImage {
+  .previewImage {
     width: 200px;
     height: 200px;
   }
