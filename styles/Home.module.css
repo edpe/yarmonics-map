@@ -38,10 +38,11 @@
 
 .text {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   color: #413c3e;
   line-height: 1.5;
+  margin: 4px;
 }
 
 .linkWrapper {
