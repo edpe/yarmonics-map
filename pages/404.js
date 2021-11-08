@@ -8,7 +8,7 @@ const FourHundredPage = () => {
     <Layout>
       <div className={styles.centerInPage}>
         <div className={styles.title}>
-          We're very sorry but we can't find the page you're looking for
+          {"We're very sorry but we can't find the page you're looking for"}
         </div>
         <Image
           className={styles.errorImage}
@@ -18,8 +18,9 @@ const FourHundredPage = () => {
           height={168}
         />
         <p className={styles.text}>
-          Try going to
-          <Link href="/"> the landing page</Link> instead
+          {"Try going to"}
+          <Link href="/">{" the landing page "}</Link>
+          {"instead"}
         </p>
       </div>
     </Layout>

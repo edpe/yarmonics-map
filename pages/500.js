@@ -8,7 +8,7 @@ const FiveHundredPage = () => {
     <Layout>
       <div className={styles.centerInPage}>
         <div className={styles.title}>
-          We're very sorry but the map has been asleep . . .
+          {"We're very sorry but the map has been asleep . . ."}
         </div>
 
         <Image
@@ -20,13 +20,14 @@ const FiveHundredPage = () => {
         />
 
         <p className={styles.text}>
-          This app goes to sleep to save energy when it's not been needed for a
-          while
+          {
+            "This app goes to sleep to save energy when it's not been visited for a while"
+          }
         </p>
         <p className={styles.text}>
-          It should have woken up by now so please{" "}
-          <Link href="/">click here to refresh the page</Link> or hit refresh on
-          your browser and all should be fine
+          {"It should have woken up by now so please "}
+          <Link href="/">{" click here to refresh the page "}</Link>
+          {"or hit refresh on your browser and all should be fine"}
         </p>
       </div>
     </Layout>
