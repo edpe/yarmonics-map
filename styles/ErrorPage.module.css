@@ -34,6 +34,13 @@
   color: #413c3e;
 }
 
+@media (min-width: 600px) {
+  .title {
+    font-size: 25px;
+    margin: 32px;
+  }
+}
+
 .text {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
@@ -41,4 +48,11 @@
   color: #413c3e;
   line-height: 1.5;
   margin: 4px;
+}
+
+@media (min-width: 600px) {
+  .text {
+    font-size: 16px;
+    margin: 32px;
+  }
 }
