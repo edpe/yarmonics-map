@@ -54,7 +54,7 @@
   list-style-type: none;
   padding: 0px;
   justify-content: space-around;
-  margin: 0;
+  margin: 10px 0;
 }
 
 @media (min-width: 600px) {
@@ -158,22 +158,24 @@
 
 .linkWrapper {
   border: 2px solid #413c3e;
+  border-radius: 4px;
   margin-top: 10px;
   padding: 10px;
   font-size: 16px;
-  font-weight: bold;
   position: relative;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 40%);
+  transition: color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .linkWrapper a {
   text-decoration: none;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #413c3e;
-  transition: color 0.2s;
-  transition: background-color 0.2s;
 }
 
 .linkWrapper:hover {
   color: #000;
   background-color: #add8e6;
+  box-shadow: 0 3px 4px rgb(0 0 0 / 40%);
 }
