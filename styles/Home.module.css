@@ -28,6 +28,23 @@
   }
 }
 
+.text {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  color: #413c3e;
+  line-height: 1.5;
+  margin: 10px;
+}
+
+@media (min-width: 1250px) {
+  .text {
+    font-size: 14px;
+    padding: 20px;
+    max-width: 400px;
+  }
+}
+
 .sponsorLogos {
   position: relative;
   display: flex;
@@ -137,22 +154,6 @@
   .previewImage {
     width: 200px;
     height: 200px;
-  }
-}
-
-.text {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 13px;
-  text-align: center;
-  color: #413c3e;
-  line-height: 1.5;
-  margin: 4px;
-}
-
-@media (min-width: 1250px) {
-  .text {
-    font-size: 14px;
-    padding: 20px 300px 0px;
   }
 }
 

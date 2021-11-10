@@ -24,13 +24,6 @@ const HomePage = () => {
           This map contains a growing collection of recordings from performances
           at Yarmonics festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site.
-          Recordings are streamed via the Soundcloud player which can be played
-          within the map.
-        </p>
-
-        <p className={styles.text}>
-          The map can be used whilst visiting the sites in situ, or from
-          wherever else you may be.
         </p>
 
         <div className={styles.linkWrapper}>
@@ -77,11 +70,13 @@ const HomePage = () => {
           />
         </li>
       </ul>
-      <p className={styles.text}>
-        {
-          "This map has been made possible with funding from Great Yarmouth Tourism & Business Improvement Area"
-        }
-      </p>
+      <div className={styles.centerInPage}>
+        <p className={styles.text}>
+          {
+            "This map has been made possible with funding from Great Yarmouth Tourism & Business Improvement Area"
+          }
+        </p>
+      </div>
     </Layout>
   );
 };
