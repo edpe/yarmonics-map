@@ -11,21 +11,57 @@ const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps;
 
   return (
-    <>
-      <GlobalContext.Provider value={global}>
-        <Head>
-          {/* <link rel="shortcut icon" href={global.favicon.url} /> */}
-          <title>Yarmonics Performance Locations</title>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-            crossOrigin=""
-          />
-        </Head>
-        <Component {...pageProps} />
-      </GlobalContext.Provider>
-    </>
+    <GlobalContext.Provider value={global}>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossOrigin=""
+        />
+        <title>Yarmonics Sound Map</title>
+        <meta
+          name="description"
+          content="This map contains a growing collection of recordings from performances
+          at Yarmonics festivals. Each red marker represents a venue or site,
+          click that marker to show all recordings from that venue or site."
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemProp="name" content="Yarmonics Sound Map" />
+        <meta
+          itemProp="description"
+          content="This map contains a growing collection of recordings from performances
+          at Yarmonics festivals. Each red marker represents a venue or site,
+          click that marker to show all recordings from that venue or site."
+        />
+        <meta itemProp="image" content="/yarmonics-meta.png" />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://yarmonics-map.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Yarmonics Sound Map" />
+        <meta
+          property="og:description"
+          content="This map contains a growing collection of recordings from performances
+          at Yarmonics festivals. Each red marker represents a venue or site,
+          click that marker to show all recordings from that venue or site."
+        />
+        <meta property="og:image" content="/yarmonics-meta.png" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Yarmonics Sound Map" />
+        <meta
+          name="twitter:description"
+          content="  This map contains a growing collection of recordings from performances
+          at Yarmonics festivals. Each red marker represents a venue or site,
+          click that marker to show all recordings from that venue or site."
+        />
+        <meta name="twitter:image" content="/yarmonics-meta.png" />
+      </Head>
+      <Component {...pageProps} />
+    </GlobalContext.Provider>
   );
 };
 
