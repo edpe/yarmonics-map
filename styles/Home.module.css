@@ -9,7 +9,6 @@
 @media (min-width: 600px) {
   .centerInPage {
     justify-content: space-between;
-    height: 45vh;
     padding: 20px;
   }
 }
