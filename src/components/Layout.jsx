@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import styles from "./Layout.module.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footer }) => {
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.header}>
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         </Link>
       </div>
       <div className={styles.contentWrapper}>{children}</div>
-      <div className={styles.footer} />
+      {footer && <div className={styles.footer} />}
     </div>
   );
 };

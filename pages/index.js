@@ -5,10 +5,10 @@ import styles from "../styles/Home.module.css";
 
 const HomePage = () => {
   return (
-    <Layout>
+    <Layout footer>
       <div className={styles.centerInPage}>
         <div className={styles.title}>Map of Festival Performances</div>
-        <div className={styles.previewImage}>
+        <a className={styles.previewImage} href="/map-page">
           <Image
             width={200}
             height={200}
@@ -16,7 +16,7 @@ const HomePage = () => {
             src="/map-yarmouth.png"
             alt="Yarmonics performance map"
           />
-        </div>
+        </a>
 
         <p className={styles.text}>
           This map contains a growing collection of recordings from performances
@@ -35,6 +35,51 @@ const HomePage = () => {
           <Link href="/map-page">View map</Link>
         </div>
       </div>
+
+      <ul className={styles.sponsorLogos}>
+        <li className={styles.sponsorLogoVisitGreatYarmouth}>
+          <Image
+            src="/visit-great-yarmouth.jpg"
+            layout="responsive"
+            width={3500}
+            height={1200}
+            alt="Visit Great Yarmouth logo"
+          />
+        </li>
+
+        <li className={styles.sponsorLogoEasternEar}>
+          <Image
+            src="/eastern-ear.jpg"
+            layout="responsive"
+            width={2048}
+            height={2048}
+            alt="Eastern ear logo"
+          />
+        </li>
+        <li className={styles.sponsorLogoOriginalProjects}>
+          <Image
+            src="/originalprojects.jpg"
+            layout="responsive"
+            width={885}
+            height={349}
+            alt="Original projects logo"
+          />
+        </li>
+        <li className={styles.sponsorLogoRanworth}>
+          <Image
+            src="/ranworth.png"
+            layout="responsive"
+            width={1588}
+            height={408}
+            alt="Ranworth trust logo"
+          />
+        </li>
+      </ul>
+      <p className={styles.text}>
+        {
+          "This map has been made possible with funding from Great Yarmouth Tourism & Business Improvement Area"
+        }
+      </p>
     </Layout>
   );
 };
