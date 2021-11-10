@@ -10,7 +10,7 @@
 
 @media (min-width: 600px) {
   .header {
-    height: 125px;
+    min-height: 125px;
   }
 }
 
@@ -49,7 +49,7 @@
 
 @media (min-width: 600px) {
   .footer {
-    height: 80px;
+    min-height: 80px;
     width: 100%;
     background-color: #1b1c1d;
     margin-top: 10px;
