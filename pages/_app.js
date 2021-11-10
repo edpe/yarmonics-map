@@ -29,9 +29,9 @@ const MyApp = ({ Component, pageProps }) => {
   );
 };
 
-MyApp.getInitialProps = async (ctx) => {
+MyApp.getStaticProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctx);
+  const appProps = await App.getStaticProps(ctx);
   const client = new ApolloClient({
     uri: "https://yarmonics-map-cms.herokuapp.com/graphql",
     cache: new InMemoryCache(),
