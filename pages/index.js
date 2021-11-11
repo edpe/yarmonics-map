@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <Layout footer>
       <div className={styles.centerInPage}>
-        <div className={styles.title}>Yarmonics Sound Map</div>
+        <div className={styles.title}>YARMONICS SOUND MAP</div>
         <Link href="/map-page" passHref>
           <a className={styles.previewImage}>
             <Image
@@ -22,12 +22,12 @@ const HomePage = () => {
 
         <p className={styles.text}>
           This map contains a growing collection of recordings from performances
-          at Yarmonics festivals. Each red marker represents a venue or site,
+          at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site.
         </p>
 
         <div className={styles.linkWrapper}>
-          <Link href="/map-page">View map</Link>
+          <Link href="/map-page">Go to the map</Link>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const HomePage = () => {
           />
         </li>
       </ul>
-      <div className={styles.centerInPage}>
+      <div className={styles.centerText}>
         <p className={styles.text}>
           {
             "This map has been made possible with funding from Great Yarmouth Tourism & Business Improvement Area"

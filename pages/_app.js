@@ -19,11 +19,11 @@ const MyApp = ({ Component, pageProps }) => {
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossOrigin=""
         />
-        <title>Yarmonics Sound Map</title>
+        <title>YARMONICS Sound Map</title>
         <meta
           name="description"
           content="This map contains a growing collection of recordings from performances
-          at Yarmonics festivals. Each red marker represents a venue or site,
+          at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site."
         />
 
@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta
           itemProp="description"
           content="This map contains a growing collection of recordings from performances
-          at Yarmonics festivals. Each red marker represents a venue or site,
+          at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site."
         />
         <meta itemProp="image" content="/yarmonics-meta.png" />
@@ -44,7 +44,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta
           property="og:description"
           content="This map contains a growing collection of recordings from performances
-          at Yarmonics festivals. Each red marker represents a venue or site,
+          at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site."
         />
         <meta property="og:image" content="/yarmonics-meta.png" />
@@ -55,7 +55,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta
           name="twitter:description"
           content="  This map contains a growing collection of recordings from performances
-          at Yarmonics festivals. Each red marker represents a venue or site,
+          at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site."
         />
         <meta name="twitter:image" content="/yarmonics-meta.png" />
