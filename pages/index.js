@@ -25,10 +25,9 @@ const HomePage = () => {
           at YARMONICS festivals. Each red marker represents a venue or site,
           click that marker to show all recordings from that venue or site.
         </p>
-
-        <div className={styles.linkWrapper}>
-          <Link href="/map-page">Go to the map</Link>
-        </div>
+        <Link href="/map-page" passHref>
+          <a className={styles.linkWrapper}>Go to the map</a>
+        </Link>
       </div>
 
       <ul className={styles.sponsorLogos}>
