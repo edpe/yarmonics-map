@@ -42,7 +42,14 @@ const Map = ({ locations }) => {
                 </div>
                 <ul className={styles.listWithoutBullets}>
                   {performances.map(
-                    ({ id, name, description, image, soundcloudLink }) => (
+                    ({
+                      id,
+                      name,
+                      description,
+                      credit,
+                      image,
+                      soundcloudLink,
+                    }) => (
                       <li key={id}>
                         <h3 className={styles.artistTitle}>{name}</h3>
                         <Image
@@ -51,7 +58,10 @@ const Map = ({ locations }) => {
                           width={1000}
                           height={563}
                         />
-                        <p>{description}</p>
+                        <p className={styles.artistDescription}>
+                          {description}
+                        </p>
+                        <p className={styles.artistDescription}>{credit}</p>
                         <ReactPlayer
                           width="100%"
                           height="100%"

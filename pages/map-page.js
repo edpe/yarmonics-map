@@ -16,7 +16,7 @@ const MapPage = ({ locations }) => {
   });
 
   return (
-    <Layout>
+    <Layout pageHeading="Yarmonics Sound Map">
       <Map locations={locations} />
     </Layout>
   );
@@ -40,6 +40,7 @@ export const getStaticProps = async () => {
             id
             name
             description
+            credit
             soundcloudLink
             image {
               url
