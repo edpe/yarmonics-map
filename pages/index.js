@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <Layout footer>
       <div className={styles.centerInPage}>
-        <div className={styles.title}>YARMONICS SOUND MAP</div>
+        <h1 className={styles.title}>YARMONICS SOUND MAP</h1>
         <Link href="/map-page" passHref>
           <a className={styles.previewImage}>
             <Image
