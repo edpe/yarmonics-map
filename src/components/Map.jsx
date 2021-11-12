@@ -61,7 +61,7 @@ const Map = ({ locations }) => {
                         <p className={styles.artistDescription}>
                           {description}
                         </p>
-                        <p className={styles.artistDescription}>{credit}</p>
+                        <p className={styles.credit}>{credit}</p>
                         <ReactPlayer
                           width="100%"
                           height="100%"

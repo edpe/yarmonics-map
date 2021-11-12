@@ -13,6 +13,13 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+.credit {
+  margin-top: 30px;
+  color: #4d4d4d;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-style: italic;
+}
+
 .popupTitle {
   margin: 20px;
   color: #fff;
