@@ -10,7 +10,7 @@ The technology and hosting was selected to accomodate the project which required
 
 View the map [here](https://yarmonics-map.vercel.app)
 
-The project was supported by 
+The project is supported by 
 
 ![Screenshot 2023-12-22 at 09 25 34](https://github.com/edpe/yarmonics-map/assets/32434854/a0e471df-e157-488b-9256-6c51abacba31)
 
