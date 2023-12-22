@@ -8,5 +8,10 @@ Performances can be added to the map by Yarmonics Festival staff via the [Heroku
 
 The technology and hosting was selected to accomodate the project which required the map to have no ongoing costs. The Map has been running for a number of years now.
 
+View the map [here](https://yarmonics-map.vercel.app)
 
+The project was supported by 
 
+![Screenshot 2023-12-22 at 09 25 34](https://github.com/edpe/yarmonics-map/assets/32434854/a0e471df-e157-488b-9256-6c51abacba31)
+
+and made possible with funding from the Great Yarmouth Tourism & Business Improvement Area
